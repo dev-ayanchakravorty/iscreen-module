@@ -1,0 +1,28 @@
+.mat-toolbar-row, .mat-toolbar-single-row{
+    height: 36px;
+}
+.mat-toolbar-multiple-rows{
+    min-height: 36px;
+}
+.example-icon {
+    padding: 0 20px;
+    color:#00bfff;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+.mat-tree {
+    background: transparent;
+}
+.mat-toolbar {
+    background: transparent;
+    border: 1px solid #00bfff;
+    color: #00bfff;
+}
+.mat-tree-node {
+    color: #00bfff;
+}
+::ng-deep .mat-checkbox-checked .mat-checkbox-background,::ng-deep .mat-checkbox-indeterminate .mat-checkbox-background {
+    background-color: #00bfff !important;
+    color: #fff;
+}

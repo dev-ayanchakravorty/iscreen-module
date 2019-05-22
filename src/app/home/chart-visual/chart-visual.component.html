@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span>Select Chart</span>
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="Chart icon">insert_chart_outlined</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="col-md-12 padding-zero">
+  <div class="chart-select-container">
+    <button *ngFor="let chart of chartData" class="btn chart-btn" [ngClass]="{'active': chart.isSelected }" (click)="bindChart(chart.name,chart.id)">
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Chart icon">{{ chart.mat_icon_name }}</mat-icon>
+      <p>{{ chart.name }}</p>
+    </button>
+  </div>
+</div>

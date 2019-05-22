@@ -1,0 +1,139 @@
+.main-screen {
+    background-image: url(../../assets/IMG/glassy-bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: 100% 100%;
+}
+.btn-primary{
+    background-color: transparent;
+    border: 1px solid #00bfff;
+    color: #00bfff;
+}
+.btn-secondary {
+    color: #00bfff;
+}
+.btn-config {
+    background: transparent;
+    border: 1px solid #00bfff;
+    border-radius: 10px;
+    color: #00bfff;
+    padding: 0.125rem;
+    position: absolute;
+    top: 70px;
+    cursor: pointer;
+    right: 23px;
+    z-index: 2;
+}
+.btn-config mat-icon {
+    font-size: 20px;
+}
+.top-icons {
+    padding: 20px 10px 0;
+    height: 100px;
+}
+.top-icons .nav-tabs > li {
+    text-align: center;
+}
+.top-icons .nav-tabs > li > a, .top-icons .nav-tabs > li > a:hover, .top-icons .nav-tabs > li.active > a, .top-icons .nav-tabs > li.active > a:focus {
+    line-height: inherit;
+    background-color: transparent;
+    color: #00bfff;
+    border: 1px solid #00bfff;
+    padding: 20px;
+    border-radius: 50% !important;
+    box-shadow: 1px 1px 14px #fff;
+    display: inline-flex;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+.top-icons .nav-tabs > li > a:hover, .top-icons .nav-tabs > li > a.active {
+    transform: scale(1.19) translateY(-0.3rem);
+    box-shadow: 1px 1px 31px #fff;
+    cursor: pointer
+}
+
+.nav-tabs {
+    border: none;
+}
+
+.button-label {
+    color: #00bfff;
+    display: none;
+}
+
+.top-icons .nav-tabs > li > a.active+.button-label {
+    display: block;
+}
+
+.top-icons .nav-tabs > li:hover .button-label{
+    display: block;
+}
+
+.close-btn {
+    color: #fff;;
+}
+
+.modal-content{
+    background: #072f39;
+    border: 2px solid #00bfff;
+    box-shadow: 1px 1px 31px #fff;
+    color: #00bfff;
+}
+
+.modal-body {
+    height: 400px;
+    overflow-y: auto;
+    color: #00bfff;
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 0.45em;
+    background-color: #9aa1a7;
+}
+ 
+.modal-body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: #00bfff;
+  outline: 1px solid #6c757d;
+}
+
+.chart-container {
+    width: 100%;
+    height: 400px;
+    border: 2px solid #00bfff;
+    box-shadow: 8px 5px 20px #00bfff;
+    border-radius: 10px;
+    margin: 20px auto 0;
+    display: block;
+}
+
+.padding-zero {
+    padding: 0;
+}
+
+.notactive {
+    opacity: 0.2;
+}
+
+/*Drag and Drop handle*/
+.example-handle {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: #ccc;
+    cursor: move;
+    width: 24px;
+    height: 24px;
+    z-index: 10;
+}
+/*Drag and Drop handle*/
+@media(max-width: 767px) {
+    .chart-container {
+        width: 100%;
+    }
+}

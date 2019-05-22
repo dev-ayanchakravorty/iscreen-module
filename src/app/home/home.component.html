@@ -1,0 +1,90 @@
+<div class="col-md-12 main-screen">
+    <!-- <span class="toggle pull-right tog-close-btn" onclick="toggle()"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+    <div class="col-md-12 padding-zero">
+        <div class="top-icons pull-left">
+            <ul class="nav nav-tabs">
+                <li class="">
+                  <a data-toggle="modal" data-target="#wizardModal" aria-expanded="true" [ngClass]="activeButton == 'bug' ? 'active' : ''" (click)="assignActive('bug')">
+                    <mat-icon class="example-icon" aria-hidden="false" aria-label="bug icon">bug_report</mat-icon>
+                  </a>
+                  <p class="button-label">Bug</p>
+                </li>
+                <li class="">
+                  <a href="#calender-section" aria-expanded="false" [ngClass]="activeButton == 'calendar' ? 'active' : ''" (click)="assignActive('calendar')">
+                    <mat-icon class="example-icon" aria-hidden="false" aria-label="calendar icon">calendar_today</mat-icon>
+                  </a>
+                  <p class="button-label">Calendar</p>
+                </li>
+                <li class="">
+                  <a href="#chart-section" aria-expanded="false" [ngClass]="activeButton == 'chart' ? 'active' : ''" (click)="assignActive('chart')">
+                    <mat-icon class="example-icon" aria-hidden="false" aria-label="chart icon">insert_chart_outlined</mat-icon>
+                  </a>
+                  <p class="button-label">Charts</p>
+                </li>
+                <li class="">
+                  <a routerLink="notifications" aria-expanded="false" [ngClass]="activeButton == 'notification' ? 'active' : ''" (click)="assignActive('notification')">
+                    <mat-icon class="example-icon" aria-hidden="false" aria-label="notification icon">notifications</mat-icon>
+                  </a>
+                  <p class="button-label">Notification</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row">
+      <div [ngClass]="!pieflag ? 'd-none': ''" class="col-md-4 m-auto" cdkDrag>
+        <div class="example-handle" cdkDragHandle>
+          <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg>
+        </div>
+        <button class="btn btn-sm btn-config" data-toggle="modal" data-target="#wizardModal" aria-expanded="true"><mat-icon class="example-icon" aria-hidden="false" aria-label="notification icon">settings</mat-icon></button>
+        <div id="piechartdiv" class="chart-container"></div>
+      </div>
+
+      <div [ngClass]="!columnflag ? 'd-none': ''" class="col-md-4 m-auto" cdkDrag>
+        <div class="example-handle" cdkDragHandle>
+          <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg>
+        </div>
+        <button class="btn btn-sm btn-config" data-toggle="modal" data-target="#wizardModal" aria-expanded="true"><mat-icon class="example-icon" aria-hidden="false" aria-label="notification icon">settings</mat-icon></button>
+        <div id="xychartdiv" class="chart-container"></div>
+      </div>
+
+      <div [ngClass]="!radarflag ? 'd-none': ''" class="col-md-4 m-auto" cdkDrag>
+        <div class="example-handle" cdkDragHandle>
+          <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg>
+        </div>
+        <button class="btn btn-sm btn-config" data-toggle="modal" data-target="#wizardModal" aria-expanded="true"><mat-icon class="example-icon" aria-hidden="false" aria-label="notification icon">settings</mat-icon></button>
+        <div id="radarchartdiv" class="chart-container"></div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="wizardModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title">Bug Filter</p>
+          <button type="button" class="close" data-dismiss="modal"><mat-icon class="example-icon close-btn" aria-hidden="false" aria-label="Close icon">close</mat-icon></button>
+        </div>
+        <div class="modal-body">
+          <router-outlet></router-outlet>
+        </div>
+        <div *ngIf="!showChartFilter" class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" (click)="toChartsec()">Next</button>
+        </div>
+        <div *ngIf="showChartFilter" class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="toFiltersec()">Back</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="ApplyFilter()">Apply</button>
+          </div>
+      </div>
+    </div>
+  </div>

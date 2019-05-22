@@ -1,0 +1,11 @@
+nav { 
+    color: #fff;
+}
+nav.navbar {
+   background-color: #000000;
+   background-image: linear-gradient(to right, #000000, #04619f);
+}
+.navbar-brand, .navbar-brand:hover {
+    font-weight: 700;
+    color: #fff;
+}

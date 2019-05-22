@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+* {
+    font-family: "Roboto";
+}
+
+body {
+    font-size: 14px;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    color: #00bfff;
+}
+
+.amcharts-amexport-menu-level-0.amcharts-amexport-top, .amcharts-amexport-menu-level-0.amcharts-amexport-top:hover {
+    background: transparent;
+    color: #00bfff;
+    border-radius: 10px;
+}
+.amcharts-amexport-item.amcharts-amexport-item-level-0 {
+    opacity: 1;
+    background: none;
+}
+.amcharts-amexport-item,.amcharts-amexport-item:hover {
+    background-image: linear-gradient(to right, #072f39 80%, #00bfff) !important;
+    border:1px solid #00bfff;
+    color:#00bfff;
+}
+a.amcharts-amexport-label {
+    color: #00bfff !important;
+}

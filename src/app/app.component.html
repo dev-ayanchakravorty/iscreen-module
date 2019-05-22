@@ -1,0 +1,8 @@
+<!-- <app-header></app-header> -->
+<img *ngIf="showLoader" [src]="loaderPath" style="width: 100vw;height: 100vh;position: absolute;z-index: 1000" />
+<mat-progress-bar *ngIf="navigating" mode="indeterminate"></mat-progress-bar>
+<button type="button" class="btn btn-primary btn-fullscreen animated infinite flash slower" (click)="toggleScreen()">{{screenButtonText}}</button>
+<div class="container-fluid glass">
+  <router-outlet></router-outlet>
+</div>
+<!-- <app-footer></app-footer> -->

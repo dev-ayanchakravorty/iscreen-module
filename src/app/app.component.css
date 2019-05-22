@@ -1,0 +1,31 @@
+.gradient-background {
+    background-color: #000000;
+    background-image: linear-gradient(to right, #000000, #04619f);
+    height: 90vh;
+}
+
+.glass {
+    background-color: #072f39;
+    background-image: url('../assets/IMG/intel-white.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: 100% 100%;
+}
+
+.btn-fullscreen {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #072f39;
+    border: 1px solid #00bfff;
+    color: #00bfff;
+    z-index:1000;
+    animation-duration: 8s;
+}
+
+.btn-fullscreen:hover {
+    background-color: #00bfff;
+    color: #072f39;
+    box-shadow: 1px 1px 31px #fff;
+}

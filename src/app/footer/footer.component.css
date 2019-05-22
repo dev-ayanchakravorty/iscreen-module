@@ -1,0 +1,11 @@
+footer {
+    background-color: #000000;
+    background-image: linear-gradient(to right, #000000, #04619f);
+    bottom: 0;
+    font-weight: 700;
+    height: auto;
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+}
