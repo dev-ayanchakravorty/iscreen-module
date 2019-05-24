@@ -94,13 +94,19 @@ THE SOFTWARE.
 
 @angular/material/checkbox
 
+@angular/material/core
+
 @angular/material/datepicker
 
 @angular/material/dialog
 
+@angular/material/form-field
+
 @angular/material/icon
 
 @angular/material/progress-bar
+
+@angular/material/select
 
 @angular/material/snack-bar
 
